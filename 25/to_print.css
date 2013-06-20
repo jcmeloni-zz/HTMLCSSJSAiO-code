@@ -1,0 +1,86 @@
+body {
+  font-family:Verdana, Arial;
+  font-size:12pt;
+  color:black;
+}
+
+div {
+  padding:3px;
+}
+
+div.title {
+  font-size:18pt;
+  font-weight:bold;
+  font-variant:small-caps;
+  letter-spacing:2px;
+  position:absolute;
+  left:0in;
+  top:0in;
+}
+
+div.image {
+  position:absolute;
+  left:0in;
+  top:0.5in;
+}
+
+div.info {
+  position:absolute;
+  left:1.75in;
+  top:0.5in;
+}
+
+div.favorites {
+  position:absolute;
+  left:1.75in;
+  top:2in;
+}
+
+div.footer {
+  position:absolute;
+  text-align:left;
+  left:0in;
+  top:9in;
+}
+
+table.stats {
+  width:100%;
+  text-align:right;
+  font-size:11pt;
+  position:absolute;
+  left:0in;
+  top:4in;
+}
+
+div.contact {
+  display:none;
+}
+
+.label {
+  font-weight:bold;
+  font-variant:small-caps;
+}
+
+tr.heading {
+  font-variant:small-caps;
+  background-color:black;
+  color:white;
+}
+
+tr.light {
+  background-color:white;
+}
+
+tr.dark {
+  background-color:#EEEEEE;
+}
+
+th.season, td.season {
+  text-align:left;
+}
+
+a, a:link, a:visited {
+  color:black;
+  font-weight:normal;
+  text-decoration:none;
+}

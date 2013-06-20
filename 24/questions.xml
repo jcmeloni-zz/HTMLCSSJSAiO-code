@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questions>
+    <q>What DOM object contains URL information for the window?</q>
+    <a>location</a>
+    <q>Which method of the document object finds the object for an element?</q>
+    <a>getElementById</a>
+    <q>If you declare a variable outside a function, is it global or local?</q>
+    <a>global</a>
+    <q>What is the formal standard for the JavaScript language called?</q>
+    <a>ECMAScript</a>
+</questions>

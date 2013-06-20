@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Displaying Keypresses</title>
+   <script type="text/javascript">
+   function DisplayKey(e) {
+      // which key was pressed?
+      if (e.keyCode) keycode=e.keyCode;
+         else keycode=e.which;
+      character=String.fromCharCode(keycode);
+      // find the object for the destination paragraph
+      k = document.getElementById("keys");
+      // add the character to the paragraph
+      k.innerHTML += character;
+   }
+   </script>
+  </head>
+  <body onkeypress="DisplayKey(event)">
+    <h1>Displaying Typed Characters</h1>
+   <p>This document includes a simple script that displays
+   the keys you type in the paragraph below. Type a few keys
+   to try it. </p>
+   <p id="keys"></p>
+</body>
+</html>

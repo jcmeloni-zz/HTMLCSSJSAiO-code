@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title>Moving and Resizing Windows</title>
+    <script type="text/javascript">
+    function doIt() {
+      if (document.form1.w.value && document.form1.h.value) {
+       self.resizeTo(document.form1.w.value, document.form1.h.value);
+      }
+      if (document.form1.x.value && document.form1.y.value) {
+       self.moveTo(document.form1.x.value, document.form1.y.value);
+     }
+    }
+    </script>
+    </head>
+    <body>
+      <h1>Moving and Resizing Windows</h1>
+      <form name="form1" action="">
+      <p><strong>Resize to:</strong><br/>
+      <input size="5" type="text" name="w" /> pixels wide and
+      <input size="5" type="text" name="h" /> pixels high </p>
+      <p><strong>-- AND/OR -- </strong></p>
+      <p><strong>Move to:</strong><br/>
+      X-position: <input size="5" type="text" name="x" />
+      Y-position: <input size="5" type="text" name="y" /></p>
+      <div><input type="button" value="Change Window" onclick="doIt();" /></div>
+      </form>
+    </body>
+</html>
+

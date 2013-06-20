@@ -1,0 +1,73 @@
+body {
+  font-family:Verdana, Arial;
+  font-size:12pt;
+  color:navy;
+}
+
+div {
+  padding:3px;
+}
+
+div.title {
+  font-size:18pt;
+  font-weight:bold;
+  font-variant:small-caps;
+  letter-spacing:2px;
+  color:black;
+}
+
+div.image {
+  float:left;
+}
+
+div.info, div.favorites {
+  float:left;
+  vertical-align:top;
+  width:350px;
+}
+
+div.footer {
+  text-align:center;
+}
+
+table.stats {
+  width:100%;
+  clear:both;
+  text-align:right;
+  font-size:11pt;
+}
+
+.label {
+  font-weight:bold;
+  font-variant:small-caps;
+}
+
+tr.heading {
+  font-variant:small-caps;
+  background-color:navy;
+  color:white;
+}
+
+tr.light {
+  background-color:white;
+}
+
+tr.dark {
+  background-color:#EEEEEE;
+}
+
+th.season, td.season {
+  text-align:left;
+}
+
+a:link, a:visited, a:active {
+  color:#19619A;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+a:hover {
+  background-color:gold;
+  font-weight:bold;
+  text-decoration:none;
+}

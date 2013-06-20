@@ -1,5 +1,5 @@
-HTMLCSSJSAiO-1e-code
-====================
+HTMLCSSJSAiO-code
+=================
 
 This repository contains the sample code used in *Sams Teach Yourself HTML, CSS, & JavaScript All-in-One* (1st edition, 2011).
 

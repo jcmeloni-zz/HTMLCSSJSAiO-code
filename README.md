@@ -13,6 +13,6 @@ The goal of this book is to give you a taste of all the skills you need to creat
 
 This book is not intended as the be-all and end-all of your education in this matter: it’s a **first step**, which will hopefully illuminate the pathways of all the other steps you will need to take to become an expert in these areas.
 
-The book's ISBN is 0672333325, and was published by Sams in 2012.
+The book's ISBN is 0672333325, and was published by Sams in 2011.
 
 For more information about the book, including a table of contents, please visit http://www.thickbook.com/books-2/sams-teach-yourself-html-css-javascript-all-in-one/.

@@ -1,20 +1,23 @@
 // Get the current date
 now = new Date();
+
 // Split into hours, minutes, seconds
-hours = now.getHours();
-mins = now.getMinutes();
-secs = now.getSeconds();
+hour_of_day = now.getHours();
+minute_of_hour = now.getMinutes();
+seconds_of_minute = now.getSeconds();
+
 // Display the time
 document.write("<h2>");
-document.write(hours + ":" + mins + ":" + secs);
+document.write(hour_of_day + ":" + minute_of_hour + ":" + seconds_of_minute);
 document.write("</h2>");
+
 // Display a greeting
 document.write("<p>");
-if  (hours < 10)  {
+if  (hour_of_day < 10)  {
      document.write("Good morning."); 
-}  else if (hours >= 14 && hours <= 17) {
+}  else if ((hour_of_day >= 14) && (hour_of_day <= 17)) {
      document.write("Good afternoon.");
-}  else if (hours >= 17)  { 
+}  else if (hour_of_day >= 17)  { 
      document.write("Good evening.");
 }  else  {
      document.write("Good day.");

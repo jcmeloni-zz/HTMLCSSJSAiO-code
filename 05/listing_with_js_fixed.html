@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sample Page</title>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  
+    <script>
+    var count = 0;
+    function incCount(){
+      count += 1;
+      return count;
+    }
+
+    function countIt(){
+      $("#counter").html(incCount);
+    }
+    </script>
+
+    <style>
+    button {
+      background-color: #0066AA;
+      color: #FFFFFF;
+      font-weight: bold;
+      border:2px solid, #C0C0C0;
+      width: 100px;
+    }
+    </style>
+  </head>
+  
+  <body>
+    <button onclick="countIt()">Click Me</button>
+    <div id="counter"></div>
+  </body>
+</html>

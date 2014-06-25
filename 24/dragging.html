@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Draggable Images Using jQuery UI</title>
+
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+   type="text/javascript">
+</script>
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"
+   type="text/javascript">
+</script>
+
+<style type="text/css">
+p {
+  margin: 0px; 
+}
+div {
+  height: 115px; 
+  width: 150px; 
+  position:fixed; 
+}
+
+#drag2 { 
+  top: 225px; 
+}
+
+#drag3 { 
+  top: 375px; 
+}
+
+img { 
+  width: 150px; 
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $("#drag1").draggable({cursor:"move", opacity:.5});
+
+   $("#drag1").on("dragstop", function() {
+     $(this).effect("bounce", 1000); 
+   });
+   
+   $("#drag2").draggable({helper:"clone"});
+   
+   $("#drag2").on("dragstop", function(e, ui) {
+     $("#drag2").animate(ui.offset); 
+   });
+   
+   $("#drag3").draggable();
+   
+   $("#drag3").on("drag", function(e) { 
+     $(this).children("p").html(e.pageX+", "+e.pageY); 
+   });
+   
+   $("#drag3").on("dragstop", function(e) {
+     $(this).children("p").html(""); 
+   });
+}); 
+</script>
+
+</head>
+<body>
+   <h1>Draggable Images Using jQuery UI</h1>
+
+   <div id="drag1">
+     <img id="img1" alt="Victoria" src="victoria.jpg" />
+   </div>
+
+   <div id="drag2">
+     <img id="img2" alt="British Columbia" src="british_columbia.jpg" />
+   </div>
+
+   <div id="drag3">
+     <img id="img3" alt="Wyoming" src="wyoming.jpg" />
+   </div>
+
+</body>
+</html>

@@ -1,38 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>ACME Widgets LLC</title>
     <style type="text/css">
       body {
          font: 12pt Verdana, Arial, Georgia, sans-serif;
       }
-      #header {
+      header {
          width: auto;
       }
       #logo {
          float:left;
       }
-      #nav {
+      nav {
          float:left;
          margin: 85px 0px 0px 0px;
          width: 400px;
          background-color: #628794;
          border: 1px solid black;
       }
-      #nav ul {
+      nav ul {
          margin: 0px;
          padding: 0px;
          list-style: none;
          display: inline;
       }
-      #nav li {
+      nav li {
          display: inline;
          line-height: 1.8em;
       }
-      #nav ul li a:link, #nav ul li a:visited {
+      nav ul li a:link, nav ul li a:visited {
          font-size: 10pt;
          font-weight: bold;
          padding: 7px 10px 7px 10px;
@@ -40,7 +37,7 @@
          background-color: #628794;
          color: #ffffff;
       }
-      #nav ul li a:hover, #nav ul li a:active {
+      nav ul li a:hover, nav ul li a:active {
          font-size: 10pt;
          font-weight: bold;
          padding: 7px 10px 7px 10px;
@@ -48,11 +45,12 @@
          background-color: #c6a648;
          color: #000000;
       }
-      #content {
+      section {
          width: auto;
          float: left;
+         clear: left;
       }
-      #content a {
+      section a {
          text-decoration: none;
          font-weight: bold;
       }
@@ -60,18 +58,18 @@
   </head>
 
   <body>
-    <div id="header">
-       <div id="logo"><img src="acmewidgets.jpg" alt="ACME Widgets LLC"/></div>
-       <div id="nav">
+    <header>
+       <div id="logo"><img src="acmewidgets.jpg" alt="ACME Widgets LLC" /></div>
+       <nav>
           <ul>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Support</a></li>
           <li><a href="#">Press</a></li>
           </ul>
-       </div>
-    </div>
-    <div id="content">
+       </nav>
+    </header>
+    <section>
        <p><strong>ACME Widgets LLC</strong> is the greatest widget-maker in all the land.</p>
        <p>Don't believe us? Read on...</p>
        <ul>
@@ -80,6 +78,6 @@
        <li><a href="#">Support</a>: It is unlikely you will need support, but we provide it anyway.</li>
        <li><a href="#">Press</a>: Read what others are saying (about how great we are).</li>
        </ul>
-    </div>
+    </section>
   </body>
 </html>

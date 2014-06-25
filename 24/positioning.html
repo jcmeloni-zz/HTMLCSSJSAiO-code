@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Positioning with jQuery UI</title>
+
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+   type="text/javascript">
+</script>
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"
+   type="text/javascript">
+</script>
+
+<style type="text/css">
+img { 
+  position: absolute; 
+  width: 150px; 
+  height: auto; 
+}
+div { 
+  height: 500px; 
+  width: 450px; 
+  border:3px solid #000; 
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $("#img2").position({my:"left top", at:"right bottom", of:"#img1"});
+   $("#img3").position({my:"left top", at:"right bottom", of:"#img2"});
+   $("div").mousemove(function(e) {
+       $("#img4").position(
+        { my:"left top", at:"center", of:e, collision:"flip", within:"div" }
+      );
+   })
+});
+</script>
+
+</head>
+<body>
+   <h1>Positioning with jQuery UI</h1>
+   <div>
+      <img id="img1" alt="Victoria" src="victoria.jpg" />
+      <img id="img2" alt="British Columbia" src="british_columbia.jpg" />
+      <img id="img3" alt="Wyoming" src="wyoming.jpg" />
+      <img id="img4" alt="Niagara Falls" src="niagarafalls.jpg" />
+   </div>
+</body>
+</html>

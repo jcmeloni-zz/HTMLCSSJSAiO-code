@@ -1,38 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.1//EN"
-  “http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html lang="en">
   <head>
     <title>Background, Text, and Border Colors</title>
+
+    <style type="text/css">
+    #uglyparagraph {
+       background-color:#cccccc;
+       color:#ff0000;
+       border:1px solid #000000;
+    }
+    .orange {
+       color:#ffa500
+    }
+    #uglydiv {
+       width:300px;
+       height:75px;
+       margin-bottom: 12px;
+       background-color:#000000;
+       border:2px dashed #ff0000;
+       color: #ffffff;
+    }
+    table {
+	   border-width: 1px solid #000;
+	   border-spacing: 2px;
+	   border-style: outset;
+	   border-collapse: collapse;
+    }
+    .greencell {
+       background-color: #00ff00;
+    }
+    .redcell {
+       background-color: #ff0000;
+    }
+    .bluecell {
+       background-color: #0000ff;
+    }
+    .yellowcell {
+       background-color: #ffff00;
+    }
+    #uglybq {
+       background-color:#0000ff;
+       border:4px dotted #ffff00;
+       color:#ffffff;
+    }
+    </style>
+
   </head>
 
   <body>
        <h1>Background, Text, and Border Colors</h1>
 
-       <p style="background-color:#CCCCCC; 
-       border:1px solid #000000; color:#FF0000">
-       Grey paragraph, black border, red text with a 
-       <span style="color:#FFA500">orange span</span>.</p>
+       <p id="uglyparagraph">Grey paragraph, black border, red text
+       with an <span class="orange">orange span</span>.</p>
 
-       <div style="width:300px; height:75px; margin-bottom: 12px; 
-       ba ckground-color:#000000; border:2px dashed #FF0000;color: #FFFFFF">
-       Black div, red border, white text. </div>
+       <div id="uglydiv">Black div, red border, white text. </div>
 
-       <table border="1">
+       <table>
        <tr>
-       <td style="background-color: #00FF00">Green Table Cell</td>
-       <td style="background-color: #FF0000">Red Table Cell</td>
+       <td class="greencell">Green Table Cell</td>
+       <td class="redcell">Red Table Cell</td>
        </tr>
        <tr>
-       <td style="background-color: #FFFF00">Blue Table Cell</td>
-       <td style="background-color: #0000FF">Yellow Table Cell</td>
+       <td class="bluecell">Blue Table Cell</td>
+       <td class="yellowcell">Yellow Table Cell</td>
        </tr>
        </table>
 
-       <blockquote style="background-color:#0000FF; 
-       border:4px dotted #FFFF00; color:#FFFFFF"><p>Blue blockquote, 
-       yellow border, white text.</p></blockquote>
+       <blockquote id="uglybq">
+       Blue blockquote, yellow border, white text.
+       </blockquote>
   </body>
 </html>
 

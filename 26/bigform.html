@@ -1,112 +1,132 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html lang="en">
   <head>
     <title>Guest Book</title>
 
     <style type="text/css">
-      .formlabel {
-         font-weight:bold;
-         width: 250px;
-         margin-bottom: 12px;
-         float: left;
-         text-align: left;
-         clear: left;
+
+      fieldset {
+         width: 75%;
+         border: 2px solid #ff0000;
       }
-      .formfield {
-         font-weight:normal;
-         margin-bottom: 12px;
+
+      legend {
+         font-weight: bold;
+         font-size: 125%;
+      }
+
+      label.question  {
+         width: 225px;
          float: left;
          text-align: left;
+         font-weight: bold;
+      }
+
+      span.question  {
+         font-weight: bold;
       }
 
       input, textarea, select {
-         border: 1px solid black;
+         border: 1px solid #000;
+         padding: 3px;
       }
+
+      #buttons {
+         margin-top: 12px;
+      }
+
     </style>
   </head>
   <body>
     <h1>My Guest Book</h1>
-    <p>Please sign my guest book. Thanks!</p>
     <form name="gbForm" method="post" action="URL_to_script">
 
-    <div class="formlabel">What is your name?</div>
-    <div class="formfield"><input type="text" name="name"
-       size="50" /></div>
+    <fieldset>
+       <legend>Personal Information</legend>
 
-    <div class="formlabel">What is your e-mail address?</div>
-    <div class="formfield"><input type="text" name="email"
-       size="50" /></div>
+       <p><label class="question" for="the_name">What is your name?</label>
+       <input type="text" id="the_name" name="the_name"
+              placeholder="Enter your full name."
+              size="50" required autofocus /></p>
 
-    <div class="formlabel">Please check all that apply:</div>
-    <div class="formfield">
-       <input type="checkbox" name="website_response[]" value="I
-       really like your Web site." />I really like your Web site.<br />
-       <input type="checkbox" name="website_response[]" value="One
-       of the best sites I’ve seen." />One of the best sites I've
-       seen.<br />
-       <input type="checkbox" name="website_response[]" value="I sure
-       wish my site looked as good as yours." />I sure wish my site
-       looked as good as yours.<br />
-       <input type="checkbox" name="website_response[]" value="I have
-       no taste and I'm pretty dense, so your site didn’t do much for
-       me." />I  have no taste and I'm pretty dense, so your site
-       didn't do much for me.<br />
+       <p><label class="question" for="the_email">What is your e-mail
+              address?</label>
+       <input type="email" id="the_email" name="the_email"
+              placeholder="Please use a real one!"
+              size="50" required /></p>
+
+    </fieldset>
+
+
+    <fieldset>
+       <legend>Survey Questions</legend>
+
+       <p><span class="question">Please check all that apply:</span><br/>
+       <input type="checkbox" id="like_it" name="some_statements[]"
+              value="I really like your Web site." />
+       <label for="like_it">I really like your Web site.</label><br/>
+       <input type="checkbox" id="the_best" name="some_statements[]"
+              value="It's one of the best sites I've ever seen" />
+       <label for="the_best">It's one of the  best sites I've ever
+              seen.</label><br/>
+       <input type="checkbox" id="jealous" name="some_statements[]"
+              value="I sure wish my site looked as good as yours." />
+       <label for="jealous">I sure wish my site looked as good as
+              yours.</label><br/>
+       <input type="checkbox" id="no_taste" name="some_statements[]"
+              value="I have no taste and I'm pretty dense, so your site
+              didn't do much for me." />
+       <label for="no_taste">I have no taste and I'm pretty dense, so your
+              site didn't do much for me.</label></p>
+
+       <p><label for="choose_scale"><span class="question">Please rate my
+              site on a scale of 1 (poor) to 10 (awesome):</span></label>
+       <input type="number" id="choose_scale" name="choose_scale"
+            min="0" max="10" step="1" value="5"/></p>
+
+       <p><span class="question">Please choose the one thing you love best
+              about my web site:</span><br/>
+       <input type="radio" id="the_picture" name="best_thing"
+              value="me" />
+       <label for="the_picture">That amazing picture of you</label><br/>
+       <input type="radio" id="the_cats" name="best_thing"
+              value="cats" />
+       <label for="the_cats">All the cat photos, of course</label><br/>
+       <input type="radio" id="the_story" name="best_thing"
+              value="childhood story" />
+       <label for="the_story">The inspiring recap of your suburban
+              childhood</label><br/>
+       <input type="radio" id="the_treasures" name="best_thing"
+              value="Elvis treasures" />
+       <label for="the_treasures">The detailed list of all your Elvis
+              memorabilia</label></p>
+
+        <p><label for="how_improve"><span class="question">How can I
+              improve my web site?</span></label><br/>
+        <select id="how_improve" name="how_improve" size="4" multiple>
+              <option value="You can't. It couldn't be better.">You can't.
+              It couldn't be better.</option>
+              <option value="More about the cats.">More about the cats.</option>
+              <option value="More about the family.">More about the
+              family.</option>
+              <option value="More about Elvis.">More about Elvis.</option>
+        </select></p>
+
+    </fieldset>
+
+    <fieldset>
+       <legend>Free for All!</legend>
+       <p><label for="message"><span class="question">Feel free to send more
+               praise, gift offers, etc.:</span></label>
+       <textarea id="message" name="message" rows="7" cols="55"></textarea></p>
+    </fieldset>
+
+    <div id="buttons">
+      <input type="submit" value="Click Here to Submit" /> or
+      <input type="reset" value="Erase and Start Over" />
     </div>
 
-    <div class="formlabel">Choose the one thing you love best about my
-    web site:</div>
-    <div class="formfield">
-       <input type="radio" name="lovebest" value="me" />That gorgeous
-       picture of you.<br />
-       <input type="radio" name="lovebest" value="cats" />All the
-       beautiful pictures of your cats.<br />
-       <input type="radio" name="lovebest" value="childhood" />The
-       inspiring recap of your suburban childhood.<br />
-       <input type="radio" name="lovebest" value="treasures" />The
-       detailed list of all your Elvis memorabilia.<br />
-    </div>
-
-    <div class="formlabel">If my web site were a book, how many copies
-    would it sell?</div>
-    <div class="formfield">
-      <select size="3" name="sales">
-        <option value="Millions, for sure." selected="selected">Millions,
-           for sure.</option>
-        <option value="100,000+ (would be Oprah's favorite)">100,000+
-           (would be Oprah's favorite)</option>
-        <option value="Thousands (an under-appreciated classic)">Thousands
-           (an under-appreciated classic)</option>
-                      <option value="Very few: not banal enough for today's public">Very
-           few: not banal enough for today's public.</option>
-        <option value="Sell? None. Everyone will download it for free.">Sell?
-           None. Everyone will download it for free.</option>
-      </select>
-    </div>
-
-    <div class="formlabel">How can I improve my web site?</div>
-    <div class="formfield">
-      <select name="suggestion">
-        <option value="Couldn’t be better." selected="selected">Couldn’t
-           be better.</option>
-        <option value="More about the cats.">More about the cats.</option>
-        <option value="More about the family.">More about the family.</option>
-        <option value="More about Elvis.">More about Elvis.</option>
-      </select>
-    </div>
-
-    <div class="formlabel">Feel free to type more praise, gift offers, etc.
-        below:</div>
-    <div class="formfield">
-      <textarea name="comments" rows="4" cols="55"></textarea>
-    </div>
-
-    <div style="float:left;">
-       <input type="submit" value="Click Here to Submit" />
-       <input type="reset" value="Erase and Start Over" />
-    </div>
     </form>
   </body>
 </html>

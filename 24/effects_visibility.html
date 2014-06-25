@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Applying Visibility Effects Using jQuery UI</title>
+
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+   type="text/javascript">
+</script>
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"
+   type="text/javascript">
+</script>
+
+<style type="text/css">
+span { 
+  display: inline-block; 
+  width: 130px; 
+  border: 2px solid #000;
+  text-align: center; 
+  cursor: pointer; 
+}
+
+div span { 
+  width: 120px; 
+  margin-left: 10px; 
+}
+
+#showMenu { 
+  position: fixed; 
+  left: 130px; 
+  top: 80px;
+}
+
+#showMenu2 { 
+  position: fixed; 
+  left: 130px; 
+  top: 105px;
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $("#showMenu, #showMenu2, #toggleMenu").hide();
+
+   $("#show").click(function(e) { 
+      $("#showMenu").show("fold", {size:22}, 2000); 
+    });
+
+   $("#show2").click(function(e) { 
+      $("#showMenu2").show("scale", {origin:["top","left"]}, 2000); 
+    });
+
+   $("#showMenu").click(function(e) { 
+      $("#showMenu").hide("fold", {size:22}, 2000); 
+   });
+
+   $("#showMenu2").click(function(e) { 
+      $("#showMenu2").hide("explode", {pieces:9}, 2000); 
+   });
+
+   $("#toggle, #toggleMenu").click(function(e) { 
+      $("#toggleMenu").toggle("blind", 
+          {direction:"up", easing:"easeOutBounce"}, 2000); 
+  });
+}); 
+</script>
+
+</head>
+<body>
+   <h1>Applying Visibility Effects Using jQuery UI</h1>
+
+   <span id="show">Show Fold</span><br/>
+   <span id="show2">Show Scale</span><br/>
+   <span id="toggle">Toggle Blind</span><br/>
+
+   <div id="showMenu">
+     <span>Fold 1</span><br/><span>Fold 2</span><br/>
+     <span>Fold 3</span><br/><span>Fold 4</span><br/>
+   </div>
+
+   <div id="showMenu2">
+     <span>Explode 1</span><br/><span>Explode 2</span><br/>
+     <span>Explode 3</span><br/><span>Explode 4</span><br/>
+   </div>
+
+   <div id="toggleMenu">
+     <span>Toggle 1</span><br/><span>Toggle 2</span><br/>
+     <span>Toggle 3</span><br/><span>Toggle 4</span><br/>
+   </div>
+
+</body>
+</html>

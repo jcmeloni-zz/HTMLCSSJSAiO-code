@@ -1,12 +1,14 @@
-function mousestatus(e) {
+function mouseStatus(e) {
     if (!e) e = window.event;
     btn = e.button;
     whichone = (btn < 2) ? "Left" : "Right";
-    message=e.type + " : " + whichone + "\n";
-    document.form1.info.value += message;
+    message=e.type + " : " + whichone + "<br/>";
+    document.getElementById('testarea').innerHTML += message;
 }
-obj=document.getElementById("testlink");
-obj.onmousedown = mousestatus;
-obj.onmouseup = mousestatus;
-obj.onclick = mousestatus;
-obj.ondblclick = mousestatus;
+
+obj=document.getElementById('testlink');
+
+obj.onmousedown = mouseStatus;
+obj.onmouseup = mouseStatus;
+obj.onclick = mouseStatus;
+obj.ondblclick = mouseStatus;

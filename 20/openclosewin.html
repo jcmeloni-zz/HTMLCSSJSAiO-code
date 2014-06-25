@@ -1,22 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html lang="en">
   <head>
     <title>Create a New Window</title>
   </head>
   <body>
     <h1>Create a New Window</h1>
-    <p>Use the buttons below to open and close windows in JavaScript.</p>
-    <form name="winform" action="">
-    <p><input type="button" value="Open New Window"
-       onclick="NewWin=window.open('','NewWin',
-      'toolbar=no,status=no,width=200,height=100');" /></p>
-    <p><input type="button" value="Close New Window"
-       onclick="NewWin.close();" /></p>
-    <p><input type="button" value="Close Main Window"
-       onclick="window.self.close();" /></p>
-   </form>
-</body>
+    <p>Use the buttons below to open and close windows using JavaScript.</p>
+
+    <button type="button" 
+            onclick="NewWin=window.open('','NewWin',
+                    'toolbar=no,status=no,width=300,height=200');"
+    >Open New Window</button>
+
+    <button type="button" 
+            onclick="NewWin.close();"
+    >Close New Window</button>
+
+    <button type="button" 
+            onclick="window.self.close();"
+    >Close Main Window</button>
+
+  </body>
 </html>

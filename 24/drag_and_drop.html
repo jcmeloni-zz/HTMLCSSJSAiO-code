@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Drag and Drop Using jQuery UI</title>
+
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+   type="text/javascript">
+</script>
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"
+   type="text/javascript">
+</script>
+
+<style type="text/css">
+div { 
+  display: inline-block; 
+  vertical-align: top; 
+}
+
+img {
+  width: 150px; 
+  margin: 0px; 
+}
+
+#images { 
+  width: 150px; 
+  height: 115px; 
+}
+
+#drop1, #drop2 { 
+  width: 300px; 
+  min-height: 110px; 
+  padding: 3px; 
+  border: 3px ridge white;
+}
+
+#drop1 img { 
+  width: 300px; 
+  height: auto;
+}
+
+#drop2 div { 
+  height: 115px; 
+  width: 290px; 
+  padding: 3px; 
+  border: 2px dotted black; 
+}
+
+#drop2 div img {
+  height: 115px; 
+  margin-right: 3px; 
+}
+
+#drop2 div span { 
+  display: inline-block;
+  vertical-align: top; 
+  font: 16px/70px sans-serif; 
+ }
+
+.drop-hover { 
+  background-color:#BBDDFF; 
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#drag1, #drag2").draggable(
+    {helper:"clone", cursor:"move", opacity:.7, zIndex:99});
+
+  $("#drop1").droppable(
+    {accept:"img", tolerance:"fit", hoverClass:"opaque"});
+
+  $("#drop1").on("dropover", function(e,ui) { 
+    $(this).effect("pulsate"); 
+  });
+
+  $("#drop1").on("drop", function(e,ui) { 
+    $(this).html($("<img></img>").attr("src", ui.draggable.attr("src")));
+    $(this).effect("bounce");
+  });
+ 
+  $("#drop2").droppable(
+    {accept:"img", tolerance:"intersect",hoverClass:"drop-hover"}
+  );
+  $("#drop2").on("drop", function(e,ui) {
+    var item = $("<div></div>");
+    item.append($("<img></img>").attr("src", ui.draggable.attr("src")));
+    item.append($("<span></span>").html(ui.draggable.attr("alt")));
+    $(this).append(item);
+  });
+}); 
+</script>
+
+</head>
+<body>
+   <h1>Drag and Drop Using jQuery UI</h1>
+
+   <div id="images">
+     <img id="drag1" alt="Victoria" src="victoria.jpg" />
+     <img id="drag2" alt="British Columbia" src="british_columbia.jpg" />
+   </div>
+
+   <div id="drop1"></div>
+   <div id="drop2"></div>
+
+</body>
+</html>
+
+
+

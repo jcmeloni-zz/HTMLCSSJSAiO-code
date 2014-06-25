@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Applying Effects to Images Using jQuery UI</title>
+
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+   type="text/javascript">
+</script>
+<script 
+   src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"
+   type="text/javascript">
+</script>
+
+<style type="text/css">
+div { 
+  height: 110px; 
+  padding: 6px;
+  width: 150px; 
+  border: 2px solid #000;
+  display: inline-block; 
+  position: fixed;  
+}
+#frame1 {
+   top: 80px;
+   left: 20px;
+}
+#frame2 {
+   top: 80px;
+   left: 240px;
+}
+#frame3 {
+   top: 80px;
+   left: 460px;
+}
+#frame4 {
+   top: 80px;
+   left: 680px;
+}
+</style>
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $("#img1").click(function(e) {
+      $(this).effect("shake", {direction:"down", distance:20, times:5}, 3000);
+   });        
+   $("#img2").click(function(e) {
+      $(this).effect("scale", 
+         {direction:"both", origin:["middle", "right"], percent:40, 
+        scale:"box", easing:"easeInBounce"}, 3000);
+   }); 
+   $("#img3").click(function(e) {
+      $(this).effect("slide", {direction:"down", distance:200}, 3000, function() {
+         $(this).effect("slide", {direction:"right", distance:200}, 3000);
+      });
+   }); 
+   $("#img4").click(function(e) {
+      $(this).effect("explode", {pieces:16}, 3000);
+   });
+});
+</script>
+
+</head>
+<body>
+   <h1>Applying Effects to Images Using jQuery UI</h1>
+   <div id="frame1">
+      <img id="img1" alt="Victoria" src="victoria.jpg" />
+   </div>
+   <div id="frame2">
+      <img id="img2" alt="British Columbia" src="british_columbia.jpg" />
+   </div>
+   <div id="frame3">
+      <img id="img3" alt="Wyoming" src="wyoming.jpg" />
+   </div>
+   <div id="frame4">
+      <img id="img4" alt="Niagara Falls" src="niagarafalls.jpg" />
+   </div>
+</body>
+</html>

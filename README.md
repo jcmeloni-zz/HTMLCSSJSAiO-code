@@ -1,7 +1,7 @@
 HTMLCSSJSAiO-code
 =================
 
-This repository contains the sample code used in *Sams Teach Yourself HTML, CSS, & JavaScript All-in-One* (2nd edition, 2014 -- not yet published!).
+This repository contains the sample code used in *Sams Teach Yourself HTML, CSS, & JavaScript All-in-One*, with tagged releases for the different editions that have been published (1st and 2nd).
 
 The sample code is organized into directories corresponding to the chapter number in which the code can be found in the book.
 
@@ -13,6 +13,6 @@ The goal of this book is to give you a taste of many the skills you need to crea
 
 This book is not intended as the be-all and end-all of your education in this matter: it’s a **first step**, which will hopefully illuminate the pathways of all the other steps you will need to take to become an expert in these areas.
 
-The book's ISBN is 0672337142, and will be published by Sams in 2014 (in the fall).
+The book's ISBN is 0672337142, and will be published by Sams in October 2014.
 
-For more information about the book, including a table of contents, please visit http://www.thickbook.com/books-2/sams-teach-yourself-html-css-javascript-all-in-one/ (although at this very moment it still reflects the previous edition).
+For more information about the book, including a table of contents, please visit http://www.thickbook.com/books-2/sams-teach-yourself-html-css-javascript-all-in-one/.
